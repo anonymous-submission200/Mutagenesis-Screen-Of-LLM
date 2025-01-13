@@ -66,6 +66,7 @@ This configuration file contains the parameters needed to run the program. Below
 ```json
 {
   "model_address": "path/to/your/model",
+  "course": "international_law",
   "path_mmlu": "path/to/MMLU",
   "path_test_right": "path/to/for_llama2-7b/test_right/{course}_test.csv",
   "path_test_wrong": "path/to/for_llama2-7b/test_wrong/{course}_test.csv",
