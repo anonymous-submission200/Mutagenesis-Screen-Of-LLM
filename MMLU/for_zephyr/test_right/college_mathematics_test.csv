@@ -1,0 +1,56 @@
+"Up to isomorphism, how many additive abelian groups G of order 16 have the property that x + x + x + x = 0 for each x in G ?",0,1,2,3,D
+"Suppose P is the set of polynomials with coefficients in Z_5 and degree less than or equal to 7. If the operator D sends p(x) in P to its derivative p′(x), what are the dimensions of the null space n and range r of D?",n = 1 and r = 6,n = 1 and r = 7,n = 2 and r = 5,n = 2 and r = 6,D
+"Let (Z_{10} , +, x) be the ring of integers modulo 10, and let S be the subset of Z_{10} represented by {0, 2, 4, 6, 8}. Which of the following statements is FALSE?","(S, +, x) is closed under addition modulo 10.","(S, +, x) is closed under multiplication modulo 10.","(S, +, x) has an identity under addition modulo 10.","(S, +, x) has no identity under multiplication modulo 10.",D
+Consider a segment of length 10. Points A and B are chosen randomly such that A and B divide the segment into three smaller segments. What is the probability that the three smaller segments could form the sides of a triangle?,0,10%,25%,50%,C
+A discrete graph is complete if there is an edge connecting any pair of vertices. How many edges does a complete graph with 10 vertices have?,10,20,25,45,D
+Let V and W be 4-dimensional subspaces of a 7-dimensional vector space X. Which of the following CANNOT be the dimension of the subspace V intersect W?,0,1,2,3,A
+"Let X be a topological space, and let A, B, and C be nonempty subsets of X such that A c B c C; that is, A is a proper subset of B, and B is a proper subset of C. Which of the following statements is (are) true?
+I. If A and C are connected, then B is connected.
+II. If A and C are compact, then B is compact.
+III. If A and C are Hausdorff, then B is Hausdorff.",I and II only,III only,I and III only,"I, II, and III",D
+For how many positive integers k does the ordinary decimal representation of the integer k! end in exactly 99 zeros?,,One,Four,Five,D
+"It takes Kate k days to write a GRE math practice test. It takes John j days to write a GRE math practice test. If Kate and John work on a practice test in alternating 2-day shifts, it takes them 10 days when Kate starts and 10.5 days when John starts. How long would it take the two to complete a practice test if Kate and John worked simultaneously?",9/2 days,5 days,41/8 days,36/7 days,D
+"In xyz-space, what are the coordinates of the point on the plane 2x + y + 3z = 3 that is closest to the origin?","(0, 0, 1)","(3/7, 3/14, 9/14)","(7/15, 8/15, 1/15)","(5/6, 1/3, 1/3)",B
+A tree is a connected graph with no cycles. How many nonisomorphic trees with 5 vertices exist?,1,2,3,4,C
+"Suppose A and B are n x n invertible matrices, where n > 1, and I is the n x n identity matrix. If A and B are similar matrices, which of the following statements must be true?	I. A - 2I and B - 2I are similar matrices. II. A and B have the same trace.	 III. A^-1 and B^-1 are similar matrices.",I only,II only,III only,"I, II, and III",D
+"Let V be the real vector space of all real 2 x 3 matrices, and let W be the real vector space of all real 4 x 1 column vectors. If T is a linear transformation from V onto W, what is the dimension of the subspace kernel of T?",2,3,4,5,A
+"A group G in which (ab)^2 = a^2b^2 for all a, b in G is necessarily",finite,cyclic,of order two,abelian,D
+"If f is a continuously differentiable real-valued function defined on the open interval (-1, 4) such that f(3) = 5 and f'(x) ≥ -1 for all x, what is the greatest possible value of f(0)?",3,4,5,8,D
+What is the units digit in the standard decimal expansion of the number 7^25?,1,3,5,7,D
+"Statement 1 | f : X → Y is continuous and X is compact. f must be uniformly continuous. Statement 2 | If f(x), g(x) : R → R are everywhere differentiable f(g(x)) must be everywhere differentiable.","True, True","True, False","False, True","False, False",A
+"In the xy-plane, the curve with parametric equations x = cos t and y = sin t, 0 <= t <= pi, has length",3,pi,3pi,3/2,B
+For which p is the norm ||x||_p expressable as an inner product?,1,2,p >= 1,infinity,B
+"Let S be a compact topological space, let T be a topological space, and let f be a function from S onto T. Of the following conditions on f, which is the weakest condition sufficient to ensure the compactness of T?",f is a homeomorphism.,f is continuous and one-to-one,f is continuous.,f is one-to-one,C
+What is the area of an equilateral triangle whose inscribed circle has radius 2?,12,16,12*sqrt(3),16*sqrt(3),C
+"Which of the following is not always true for x, y, z ∈ R^k?",|x| ≥ 0,|x · y| ≤ |x||y|,|x| = 0 if and only if x = 0,|x + y| = |x| + |y|,D
+"If V and W are 2-dimensional subspaces of R^4 ,what are the possible dimensions of the subspace V intersect W?",1 only,2 only,0 and 1 only,"0, 1, and 2 only",D
+"The curves y = (sin x + cos x)^4 and y = (sin x - cos x)^4 intersect at x = 0. If a is the smallest positive value of x at which these curves next intersect, determine the area between these curves from x = 0 to x = a.",2,π,4,3π/2,C
+"If f is a linear transformation from the plane to the real numbers and if f(1, 1) = 1 and f(-1, 0) = 2, then f(3, 5) =",9,8,0,-5,A
+Which of the following is NOT a group?,The integers under addition,The nonzero integers under multiplication,The nonzero real numbers under multiplication,The complex numbers under addition,B
+"Let R be a ring and let U and V be (two-sided) ideals of R. Which of the following must also be ideals of R ?
+I. {u + v : u \in and v \in V}
+II. {uv : u \in U and v \in V}
+III. {x : x \in U and x \in V}",II only,III only,I and II only,I and III only,D
+"Water drips out of a hole at the vertex of an upside down cone at a rate of 3 cm^3 per minute. The
+cone’s height and radius are 2 cm and 1 cm, respectively. At what rate does the height of the water change
+when the water level is half a centimeter below the top of the cone? The volume of a cone is V = (π/3)*r^2*h,
+where r is the radius and h is the height of the cone.",−48/π cm/min,−4/(3π) cm/min,−8/(3π) cm/min,−16/(3π) cm/min,D
+"Consider the system of linear equations
+w + 3x + 2y + 2z = 0
+w + 4x + y = 0
+3w + 5x + 10 y + 14z = 0
+2w + 5x + 5y + 6z = 0
+with solutions of the form (w, x, y, z), where w x, y, and z are real. Which of the following statements is FALSE?",The system is consistent.,The system has infinitely many solutions.,The sum of any two solutions is a solution.,"Every solution is a scalar multiple of (-5, 1, 1, 0).",D
+"If c > 0 and f(x) = e^x - cx for all real numbers x, then the minimum value of f is",f(c),f(e^c),f(1/c),f(log c),D
+"Suppose A is a 3 × 3 matrix such that det(A − λI) = −λ^3 + 3λ^2 + λ − 3, where I is the 3 × 3 identity matrix. Which of the following are TRUE of A?
+I. The trace of A is 3.
+II. The determinate of A is −3.
+III. The matrix A has eigenvalues −3 and 1.",I only,II only,III only,I and II only,D
+Let y = f(x) be a solution of the differential equation x dy + (y - xe^x) dx = 0 such that y = 0 when x = 1. What is the value of f(2)?,1/(2e),1/e,e^2/2,2e,C
+"A fair coin is to be tossed 100 times, with each toss resulting in a head or a tail. If H is the total number of heads and T is the total number of tails, which of the following events has the greatest probability?",H = 50,T >= 60,51 <= H <= 55,H >= 48 and T >= 48,D
+"Let I != A != -I, where I is the identity matrix and A is a real 2 x 2 matrix. If A = A^(-1), then the trace of A is",2,1,0,-1,C
+"Let f(x, y) = x^3 + y^3 + 3xy for all real x and y. Then there exist distinct points P and Q such that f has a",local maximum at P and at Q,saddle point at P and at Q,local maximum at P and a saddle point at Q,local minimum at P and a saddle point at Q,C
+"If A is a subset of the real line R and A contains each rational number, which of the following must be true?","If A is open, then A = R.","If A is closed, then A = R.","If A is uncountable, then A = R.","If A is uncountable, then A is open.",B
+Let M be a 5 x 5 real matrix. Exactly four of the following five conditions on M are equivalent to each other. Which of the five conditions is equivalent to NONE of the other four?,"For any two distinct column vectors u and v of M, the set {u, v} is linearly independent.",The homogeneous system Mx = 0 has only the trivial solution.,The system of equations Mx = b has a unique solution for each real 5 x 1 column vector b.,The determinant of M is nonzero.,A
+"The probability that a point (x, y) in R^2 is chosen follows a uniform random distribution within the region described by the inequality 0 < |x| + |y| < 1 . What is the probability that 2(x + y) > 1?",0,1/4,sqrt(2)/4,1/sqrt(2),B
+X is a finite set with the following property: The number of subsets of X that contain exactly 3 elements is 14 more than the number of subsets of X that contain exactly 2 elements. How many subsets of X contain exactly 4 elements?,24,25,28,35,D
