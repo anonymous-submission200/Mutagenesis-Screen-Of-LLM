@@ -17,13 +17,13 @@ This configuration file contains the parameters needed to run the program. Below
 - **Example**: `"path/to/MMLU"`
 
 ### `"path_test_right"`
-- **Description**: The path template for the MMLU dataset where the model provides correct answers.
+- **Description**: The path template for the MMLU dataset where the model provides correct answers with the random seed **YOU ARE USING** (random seed = 0 provided for Llama2-7b/Zephyr).
 - **Example**: 
   - For Llama2-7b: `"path/to/for_llama2-7b/test_right"`
   - For Zephyr: `"path/to/for_zephyr/test_right"`
 
 ### `"path_test_wrong"`
-- **Description**: The path template for the MMLU dataset where the model provides incorrect answers.
+- **Description**: The path template for the MMLU dataset where the model provides incorrect answers with the random seed **YOU ARE USING** (random seed = 0 provided for Llama2-7b/Zephyr).
 - **Example**: 
   - For Llama2-7b: `"path/to/for_llama2-7b/test_wrong"`
   - For Zephyr: `"path/to/for_zephyr/test_wrong"`
