@@ -1,0 +1,48 @@
+______________ is a widespread app’s coding mistake made by developers which could be exploited by an attacker for gaining access or malfunctioning your system.,Memory leakage,Buffer-overrun,Less processing power,Inefficient programming,B
+"Why apps developed in languages like C, C++ is prone to Buffer-overflow?",No string boundary checks in predefined functions,No storage check in the external memory,No processing power check,No database check,A
+Man in the middle attack can endanger the security of Diffie Hellman method if two parties are not,Joined,Authenticated,Submitted,Shared,B
+_______________ is the central node of 802.11 wireless operations.,WPA,Access Point,WAP,Access Port,B
+What is Nmap?,"It is a scanner which works by injecting packets to a range of addresses, and inferring what hosts and services might be at those addresses, based on the responses",It is a network fuzz testing tool,It is a map of the Internet,"It is a suite of tools for scripting attacks: probe, construct, encode, inject, wait for response",A
+How do you prevent SQL injection?,Escape queries,Interrupt requests,Merge tables,All of the above,A
+"What does it mean to ""be stealthy"" during a penetration test?",Performing the tests from an undisclosed location,Using encryption during tests to make the source of attacks impossible to determine,Performing penetration testing without the target organization knowing,"Taking care to avoid activities during a penetration test that might attract attention, e.g., by operators or IDS services",D
+The __________ was a huge marketplace of Dark Web specifically famous for selling of illegal drugs & narcotics as well as you can find a wide range of other goods for sale.,Silk Road,Cotton Road,Dark Road,Drug Road,A
+The ______________ is categorized as an unknown segment of the Deep Web which has been purposely kept hidden & is inaccessible using standard web browsers.,Haunted web,World Wide Web,Dark web,Surface web,C
+What does EXE do when the STP solver times out on a constraint query for a particular path?,Assume that the query is satisfiable and continue executing the path.,Assume that the query is not satisfiable and stop executing the path,"Restart STP and retry the query, up to a limited number of retries.",Remove a subset of the constraints and retry the query.,B
+To verify a digital signature we need the,Sender’s Private key,Sender’s Public key,Receiver’s Private key,Receiver’s Public key,B
+Which among them has the strongest wireless security?,WEP,WPA,WPA2,WPA3,D
+Failed sessions allow brute-force attacks on access credentials. This type of attacks are done in which layer of the OSI model?,Physical layer,Data-link Layer,Session layer,Presentation layer,C
+Which of the following is an authentication method?,Secret question,Biometric,SMS code,All of the above,D
+A digital signature needs a,Private-key system,Shared-key system,Public-key system,All of them,C
+Which of the following deals with network intrusion detection and real-time traffic analysis?,John the Ripper,L0phtCrack,Snort,Nessus,C
+The Message condentiality or privacy means that the sender and the receiver expect,Integrity,Condentiality,Authentication,Nonrepudiation,B
+"When a wireless user authenticates to any AP, both of them go in the course of four-step authentication progression which is called _____________",AP-handshaking,4-way handshake,4-way connection,wireless handshaking,B
+Message authentication is a service beyond,Message Condentiality,Message Integrity,Message Splashing,Message Sending,B
+Which of the following are most vulnerable to injection attacks?,Session IDs,Registry keys,Network communications,SQL queries based on user input,D
+Which of the following is a Wireless traffic Sniffing tool?,Maltego,BurpSuit,Nessus,Wireshark,D
+A ___________ is a method in which a computer security mechanism is bypassed untraceable for accessing the computer or its information.,front-door,backdoor,clickjacking,key-logging,B
+What is a web proxy?,A piece of software that intercepts and possibly modifies requests (and responses) between a web browser and web server,An agent that makes decisions on the client's behalf when interacting with web applications,"A piece of software that makes a web application look like a standalone application, making it easier to test","A simulator for the web, for use when off-line",A
+The sub key length at each round of DES is__________,32,56,48,64,B
+What are the types of scanning?,"Port, network, and services","Network, vulnerability, and port ","Passive, active, and interactive","Server, client, and network",B
+"A sender must not be able to deny sending a message that was sent, is known as",Message Nonrepudiation,Message Integrity,Message Condentiality,Message Sending,A
+A proxy rewall lters at the,Physical layer,Application layer,Data link layer,Network layer,B
+A special tool is necessary for entering the network which is _______________ that helps the anonymous internet users to access into the Tor’s network and use various Tor services.,Opera browser,Firefox,Chrome,Tor browser,D
+How does a buffer overflow on the stack facilitate running attacker-injected code?,By overwriting the return address to point to the location of that code,By writing directly to the instruction pointer register the address of the code,By writing directly to %eax the address of the code,"By changing the name of the running executable, stored on the stack",A
+____________________ is the anticipation of unauthorized access or break to computers or data by means of wireless networks.,Wireless access,Wireless security,Wired Security,Wired device apps,B
+Which of the following are benefits of penetration testing?,Results are often reproducible,Full evidence of security: a clean test means a secure system,Compositionality of security properties means tested components are secure even if others change,Makes an adversarial neural network converge more quickly,A
+1. _________ framework made cracking of vulnerabilities easy like point and click.,.Net,Metasploit,Zeus,Ettercap,B
+You are given a message (m) and its OTP encryption (c). Can you compute the OTP key from m and c ?,"No, I cannot compute the key.","Yes, the key is k = m xor c.",I can only compute half the bits of the key.,"Yes, the key is k = m xor m.",B
+"When the data must arrive at the receiver exactly as they were sent, its called",Message Condentiality,Message Integrity,Message Splashing,Message Sending,B
+Which Nmap scan is does not completely open a TCP connection?,SYN stealth scan,TCP connect,XMAS tree scan,ACK scan,A
+"Based on the paper “Click Trajectories: End-to-End Analysis of the Spam Value Chain”, which of the following statements are true? “Spammers” here refer to operators of various parts of the “spam value chain.”",Spammers run their spam-advertised web sites on compromised user machines that are part of a botnet.,Spammers need to register domain names in order for their spam-based advertisements to be effective.,There is a high cost for spammers to switch acquiring banks.,B and C,D
+"___________________ is alike as that of Access Point (AP) from 802.11, & the mobile operators uses it for offering signal coverage.",Base Signal Station,Base Transmitter Station,Base Transceiver Station,Transceiver Station,C
+A __________ is a sequential segment of the memory location that is allocated for containing some data such as a character string or an array of integers.,stack,queue,external storage,buffer,D
+"Let suppose a search box of an application can take at most 200 words, and you’ve inserted more than that and pressed the search button; the system crashes. Usually this is because of limited __________",buffer,external storage,processing power,local storage,A
+___________________ began to show up few years back on wireless access points as a new way of adding or connecting new devices.,WPA2,WPA,WPS,WEP,C
+Which of the following does authorization aim to accomplish?,Restrict what operations/data the user can access,Determine if the user is an attacker,Flag the user if he/she misbehaves,Determine who the user is,A
+How is IP address spoofing detected?,Installing and configuring a IDS that can read the IP header,Comparing the TTL values of the actual and spoofed addresses,Implementing a firewall to the network,Identify all TCP sessions that are initiated but does not complete successfully,B
+Which of the following is not an example of presentation layer issues?,Poor handling of unexpected input can lead to the execution of arbitrary instructions,Unintentional or ill-directed use of superficially supplied input,Cryptographic flaws in the system may get exploited to evade privacy,Weak or non-existent authentication mechanisms,D
+"Suppose Unix did not provide a way of passing file descriptors between processes, but still allowed inheriting file descriptors from a parent on fork and exec. What aspects of the OKWS design would break without file descriptor passing?
+1. It would be impossible for services to send messages to oklogd.
+2. It would be impossible for services to get a TCP connection to a database proxy.","True, True","False, False","True, False","False, True",B
+Why would a ping sweep be used?,To identify live systems,To locate live systems,To identify open ports,To locate firewalls,A
+"The ______________ can cost you money, by sending text messages from your mobile phone numbers.",IM – Trojans,Backdoor Trojans,SMS Trojan,Ransom Trojan,C

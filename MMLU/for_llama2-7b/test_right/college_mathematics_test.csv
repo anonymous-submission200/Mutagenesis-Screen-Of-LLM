@@ -1,0 +1,63 @@
+"Suppose P is the set of polynomials with coefficients in Z_5 and degree less than or equal to 7. If the operator D sends p(x) in P to its derivative p′(x), what are the dimensions of the null space n and range r of D?",n = 1 and r = 6,n = 1 and r = 7,n = 2 and r = 5,n = 2 and r = 6,D
+"Let (Z_{10} , +, x) be the ring of integers modulo 10, and let S be the subset of Z_{10} represented by {0, 2, 4, 6, 8}. Which of the following statements is FALSE?","(S, +, x) is closed under addition modulo 10.","(S, +, x) is closed under multiplication modulo 10.","(S, +, x) has an identity under addition modulo 10.","(S, +, x) has no identity under multiplication modulo 10.",D
+"A large class is to be divided into teams and each student must be a member of exactly one team. However, each student dislikes three of their classmates. Dislike between students need not be mutual. If the teams do not need to be equally sized, how many must be created so that no student is the teammate of someone they dislike?",4,7,10,13,B
+Sofia and Tess will each randomly choose one of the 10 integers from 1 to 10. What is the probability that neither integer chosen will be the square of the other?,0.64,0.72,0.81,0.95,D
+"Let K be a nonempty subset of R^n, where n > 1. Which of the following statements must be true?
+I. If K is compact, then every continuous real-valued function defined on K is bounded.
+II. If every continuous real-valued function defined on K is bounded, then K is compact.
+III. If K is compact, then K is connected.",I only,II only,III only,I and II only,D
+"Let X be a topological space, and let A, B, and C be nonempty subsets of X such that A c B c C; that is, A is a proper subset of B, and B is a proper subset of C. Which of the following statements is (are) true?
+I. If A and C are connected, then B is connected.
+II. If A and C are compact, then B is compact.
+III. If A and C are Hausdorff, then B is Hausdorff.",I and II only,III only,I and III only,"I, II, and III",D
+"If v is an eigenvector of an invertible matrix A, then which of the following is I are necessarily
+true?
+I. v is also an eigenvector of 2A.
+II. v is also an eigenvector of A^2.
+III. v is also an eigenvector of A^(-1).",I only,II only,III only,"I, II, and III",D
+For how many positive integers k does the ordinary decimal representation of the integer k! end in exactly 99 zeros?,,One,Four,Five,D
+Statement 1 | Suppose {s_n} and {t_n} are sequences of complex numbers such that lim_n→∞ s_n = s and lim_n→∞ tn = t. lim_n→∞ s_nt_n = st. Statement 2 | There exists a bounded sequence of real numbers with no convergent subsequence.,"True, True","True, False","False, True","False, False",B
+"Define a binary operation on Z, the set of integers, by the equation m • n = m + n + mn. Which of
+the following statements is (are) true about the binary structure (Z, • )?
+I. This structure is not a group since the operation is not associative.
+II. This structure is not a group since there is no identity element.
+III. This structure is not a group since not all elements have an inverse.
+IV. This structure is a group.",I and II only,I and III only,II and III only,III only,D
+"It takes Kate k days to write a GRE math practice test. It takes John j days to write a GRE math practice test. If Kate and John work on a practice test in alternating 2-day shifts, it takes them 10 days when Kate starts and 10.5 days when John starts. How long would it take the two to complete a practice test if Kate and John worked simultaneously?",9/2 days,5 days,41/8 days,36/7 days,D
+What is the largest order of an element in the group of permutations of 5 objects?,5,6,12,15,B
+"Suppose A and B are n x n invertible matrices, where n > 1, and I is the n x n identity matrix. If A and B are similar matrices, which of the following statements must be true?	I. A - 2I and B - 2I are similar matrices. II. A and B have the same trace.	 III. A^-1 and B^-1 are similar matrices.",I only,II only,III only,"I, II, and III",D
+"Let C be the circle in the yz-plane whose equation is (y - 3)^2 + z^2 = 1. If C is revolved around the z-axis, the surface generated is a torus. What is the equation of this torus?",x^2 + y^2 + z^2 + 8 = 6y,(x^2 + y^2 + z^2)^2 = 8 + 36(x^2 + z^2),(x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + z^2),(x^2 + y^2 + z^2 + 8)^2 = 36(x^2 + y^2),D
+"A group G in which (ab)^2 = a^2b^2 for all a, b in G is necessarily",finite,cyclic,of order two,abelian,D
+"If f: R -> R is a bounded function that is Lebesgue integrable, then which of the following must be true?",f is Riemann integrable.,There does not exist a countably infinite E of R such that f is nondifferentiable at every x \in E.,There does not exist an uncountable subset E of R such that f is nondifferentiable at every x \in E.,None of the above.,D
+"Which of the following is not always true for x, y, z ∈ R^k?",|x| ≥ 0,|x · y| ≤ |x||y|,|x| = 0 if and only if x = 0,|x + y| = |x| + |y|,D
+"Let V be the vector space, under the usual operations, of real polynomials that are of degree at most 3. Let W be the subspace of all polynomials p (x) in V such that p (0) = p(1) = p(-1) = 0. Then dim V + dim W is",4,5,6,7,B
+"If V and W are 2-dimensional subspaces of R^4 ,what are the possible dimensions of the subspace V intersect W?",1 only,2 only,0 and 1 only,"0, 1, and 2 only",D
+How many real roots does the polynomial 2x^5 + 8x - 7 have?,,One,Two,Three,B
+In a game two players take turns tossing a fair coin; the winner is the first one to toss a head. The probability that the player who makes the first toss wins the game is,1/4,1/3,1/2,2/3,D
+Let x and y be positive integers such that 3x + 7y is divisible by 11. Which of the following must also be divisible by 11?,4x + 6y,x + y + 5,9x + 4y,4x - 9y,D
+"Let R be a ring and let U and V be (two-sided) ideals of R. Which of the following must also be ideals of R ?
+I. {u + v : u \in and v \in V}
+II. {uv : u \in U and v \in V}
+III. {x : x \in U and x \in V}",II only,III only,I and II only,I and III only,D
+"Water drips out of a hole at the vertex of an upside down cone at a rate of 3 cm^3 per minute. The
+cone’s height and radius are 2 cm and 1 cm, respectively. At what rate does the height of the water change
+when the water level is half a centimeter below the top of the cone? The volume of a cone is V = (π/3)*r^2*h,
+where r is the radius and h is the height of the cone.",−48/π cm/min,−4/(3π) cm/min,−8/(3π) cm/min,−16/(3π) cm/min,D
+"Consider the system of linear equations
+w + 3x + 2y + 2z = 0
+w + 4x + y = 0
+3w + 5x + 10 y + 14z = 0
+2w + 5x + 5y + 6z = 0
+with solutions of the form (w, x, y, z), where w x, y, and z are real. Which of the following statements is FALSE?",The system is consistent.,The system has infinitely many solutions.,The sum of any two solutions is a solution.,"Every solution is a scalar multiple of (-5, 1, 1, 0).",D
+"If c > 0 and f(x) = e^x - cx for all real numbers x, then the minimum value of f is",f(c),f(e^c),f(1/c),f(log c),D
+"Suppose A is a 3 × 3 matrix such that det(A − λI) = −λ^3 + 3λ^2 + λ − 3, where I is the 3 × 3 identity matrix. Which of the following are TRUE of A?
+I. The trace of A is 3.
+II. The determinate of A is −3.
+III. The matrix A has eigenvalues −3 and 1.",I only,II only,III only,I and II only,D
+"A fair coin is to be tossed 100 times, with each toss resulting in a head or a tail. If H is the total number of heads and T is the total number of tails, which of the following events has the greatest probability?",H = 50,T >= 60,51 <= H <= 55,H >= 48 and T >= 48,D
+"Statement 1 | If A is connected, the closure of A must be connected. Statement 2 | Every continuous function f : (0, 1) → (0, 1) has a fixed point.","True, True","True, False","False, True","False, False",B
+"Let f(x) be a function whose graph passes through the origin. If f(2n) = n^2 + f[2(n - 1)] for every integer n, what is the value of f(8)?",24,30,32,36,B
+How many structurally distinct Abelian groups have order 72?,4,6,8,9,B
+"The probability that a point (x, y) in R^2 is chosen follows a uniform random distribution within the region described by the inequality 0 < |x| + |y| < 1 . What is the probability that 2(x + y) > 1?",0,1/4,sqrt(2)/4,1/sqrt(2),B
+(1+i)^10 =,1,i,32,32i,D
+"If U and V are 3-dimensional subspaces of R^5, what are the possible dimensions of U ∩ V?",0,1,0 or 1,"1, 2, or 3",D
