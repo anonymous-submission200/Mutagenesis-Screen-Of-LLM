@@ -5,11 +5,15 @@ This configuration file contains the parameters needed to run the program. Below
 ## Parameters
 
 ### `"model_address"`
-- **Description**: The file path or URL to the model you are using.
+- **Description**: The file path to the model you are using.
 - **Example**: `"path/to/your/model"`
 
+### `"course"`
+- **Description**: The specific course name for testing.
+- **Example**: `"international_law"`
+  
 ### `"path_mmlu"`
-- **Description**: The directory containing the MMLU benchmark dataset. This folder should include subfolders for `dev`, `test`, and `val`.
+- **Description**: The directory containing the MMLU benchmark dataset. This folder should include subfolders for `dev`, `test`, and `val` that contain MMLU csv files.
 - **Example**: `"path/to/MMLU"`
 
 ### `"path_test_right"`
@@ -48,10 +52,13 @@ This configuration file contains the parameters needed to run the program. Below
 - **Description**: The maximum number of tokens allowed.
 - **Example**: `4096` (as used in this paper)
 
+### `"seed"`
+- **Description**: Random seed value.
+- **Example**: `0`
+
 ### `"pad_list"`
 - **Description**: A list specifying the mutation types to apply. Supported values are `"max"` for maximum mutation, `"min"` for minimum mutation, and `"zero"` for zero mutation.
 - **Example**: `["max", "min", "zero"]`
-
 ---
 
 ## Example `parameters_config.json`
@@ -68,5 +75,6 @@ This configuration file contains the parameters needed to run the program. Below
   "max_right": 14,
   "step": 64,
   "max_token": 4096,
+  "seed": 0,
   "pad_list": ["max", "min", "zero"]
 }
