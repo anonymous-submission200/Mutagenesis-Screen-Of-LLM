@@ -8,8 +8,8 @@ This configuration file contains the parameters needed to run the program. Below
 - **Description**: The file path to the model you are using.
 - **Example**: `"path/to/your/model"`
 
-### `"course"`
-- **Description**: The specific course name for testing.
+### `"task"`
+- **Description**: The specific MMLU task name for testing.
 - **Example**: `"international_law"`
   
 ### `"path_mmlu"`
@@ -17,16 +17,16 @@ This configuration file contains the parameters needed to run the program. Below
 - **Example**: `"path/to/MMLU"`
 
 ### `"path_test_right"`
-- **Description**: The path template for the dataset where the model provides correct answers. Replace `{course}` with the specific course name.
+- **Description**: The path template for the MMLU dataset where the model provides correct answers.
 - **Example**: 
-  - For Llama2-7b: `"path/to/for_llama2-7b/test_right/{course}_test.csv"`
-  - For Zephyr: `"path/to/for_zephyr/test_right/{course}_test.csv"`
+  - For Llama2-7b: `"path/to/for_llama2-7b/test_right"`
+  - For Zephyr: `"path/to/for_zephyr/test_right"`
 
 ### `"path_test_wrong"`
-- **Description**: The path template for the dataset where the model provides incorrect answers. Replace `{course}` with the specific course name.
+- **Description**: The path template for the MMLU dataset where the model provides incorrect answers.
 - **Example**: 
-  - For Llama2-7b: `"path/to/for_llama2-7b/test_wrong/{course}_test.csv"`
-  - For Zephyr: `"path/to/for_zephyr/test_wrong/{course}_test.csv"`
+  - For Llama2-7b: `"path/to/for_llama2-7b/test_wrong"`
+  - For Zephyr: `"path/to/for_zephyr/test_wrong"`
 
 ### `"path_output_base"`
 - **Description**: The directory where output files will be saved.
@@ -66,10 +66,10 @@ This configuration file contains the parameters needed to run the program. Below
 ```json
 {
   "model_address": "path/to/your/model",
-  "course": "international_law",
+  "task": "international_law",
   "path_mmlu": "path/to/MMLU",
-  "path_test_right": "path/to/for_llama2-7b/test_right/{course}_test.csv",
-  "path_test_wrong": "path/to/for_llama2-7b/test_wrong/{course}_test.csv",
+  "path_test_right": "path/to/for_llama2-7b/test_right",
+  "path_test_wrong": "path/to/for_llama2-7b/test_wrong",
   "path_output_base": "path/to/output/folder",
   "time": "110724",
   "max_test": 21,
