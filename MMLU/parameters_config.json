@@ -1,0 +1,15 @@
+{
+  "model_address": "path/to/your/model",
+  "task": "international_law",
+  "path_mmlu": "path/to/MMLU",
+  "path_test_right": "path/to/for_llama2-7b/test_right",
+  "path_test_wrong": "path/to/for_llama2-7b/test_wrong",
+  "path_output_base": "path/to/output/folder",
+  "time": "110724",
+  "max_test": 21,
+  "max_right": 14,
+  "step": 64,
+  "max_token": 4096,
+  "seed": 0,
+  "pad_list": ["max", "min", "zero"]
+}
