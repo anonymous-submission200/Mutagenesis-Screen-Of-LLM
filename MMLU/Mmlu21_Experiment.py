@@ -15,13 +15,16 @@ class Parameters:
         Initialize the Parameters class.
 
         Args:
-            task (str): Current task name, e.g., "international_law".
-            seed (int): Random seed value.
             config_path (str): Path to the JSON configuration file.
         """
         # Load JSON configuration file
-        with open(path_config, 'r') as f:
-            config = json.load(f)
+        if not os.path.isfile(path_config):
+            raise FileNotFoundError(f"The JSON configuration file does not exist: {path_config}")
+        try:
+            with open(path_config, 'r') as f:
+                config = json.load(f)
+        except Exception as e:
+            raise RuntimeError(f"Error loading JSON configuration file file {path_config}: {e}")
 
         # Set parameters
         self.task = config["tast"]
