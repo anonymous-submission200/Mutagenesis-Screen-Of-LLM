@@ -174,7 +174,6 @@ def model_load_func(ps, dt):
         ps: Parameters object containing model settings.
         dt: Data object containing GPU allocation and processing settings.
     """
-    torch.manual_seed(ps.seed)
     # Initialize tokenizer
     ps.tokenizer = AutoTokenizer.from_pretrained(ps.model_address, padding_side="left")
     ps.tokenizer.pad_token_id = 0 if ps.tokenizer.pad_token_id is None else ps.tokenizer.pad_token_id
