@@ -53,6 +53,10 @@ class Parameters:
         """
         Verify the existence of required directories and files. Raise errors if any validation fails.
         """
+        # Check if the model address exists
+        if not os.path.isdir(self.model_address):
+            raise FileNotFoundError(f"The model address does not exist: {self.model_address}")
+            
         # Check if the MMLU folder exists
         if not os.path.isdir(self.path_mmlu):
             raise FileNotFoundError(f"The MMLU folder does not exist: {self.path_mmlu}")
