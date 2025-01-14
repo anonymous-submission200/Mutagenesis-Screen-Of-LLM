@@ -313,9 +313,9 @@ def one_mid_func(ps, dt, mid, loc1, loc2):
     # Initialize padding data
     dt.pad_dict = _initialize_pad_dict(ps, device, mid)
 
-    # Process the parameter matrix by loc2
+    # Process the parameter matrix all sites with one loc2
     for loc2_idx in range(loc2, loc2_size, ps.step):
-        _process_row(ps, dt, mid, loc1_size, loc2_size, loc2_idx, loc1)
+        _process_one_loc2(ps, dt, mid, loc1_size, loc2_size, loc2_idx, loc1)
         loc1 = 0  # Reset loc1 to the beginning after completing a loc2
 
     # Mark the current intermediate layer as processed
@@ -348,9 +348,9 @@ def _initialize_pad_dict(ps, device, mid):
 
     return pad_dict
 
-def _process_row(ps, dt, mid, loc1_size, loc2_size, loc2_idx, loc1):
+def _process_one_loc2(ps, dt, mid, loc1_size, loc2_size, loc2_idx, loc1):
     """
-    Process a row of the parameter matrix, performing padding and restoration operations block by block.
+    Processall sites with the same loc2 on the parameter matrix, performing padding and restoration operations block by block.
 
     Args:
         ps: Parameters object containing the parameter dictionary and configuration.
