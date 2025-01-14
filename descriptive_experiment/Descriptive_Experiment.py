@@ -171,7 +171,7 @@ def file_func(ps, dt, mid):
     loc1, loc2 = _stop_site_func(ps, dt, mid)
     return loc1, loc2
 
-def one_mid_func(ps, dt, mid, w_st, h_st):
+def one_mid_func(ps, dt, mid, loc1, loc2):
     """
     Process the specified intermediate layer parameters, performing padding, computation, and restoration.
 
