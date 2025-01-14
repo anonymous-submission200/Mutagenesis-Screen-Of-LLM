@@ -23,16 +23,7 @@ class Parameters(object):
                 config = json.load(f)
         except Exception as e:
             raise RuntimeError(f"Error loading JSON configuration file file {path_config}: {e}")
-        #
-        '''
-        self.model_address="/data/kehu4/dl/dl/hf/zephyr-7b-beta"        #
 
-        self.input_text="The life cycle of Drosophila:"
-        self.seed = 0       #
-        self.step = 128
-        self.pad_list = ['max', 'min', 'zero']
-        self.max_length = 150 #300
-        '''
         # Set parameters
         self.seed = config["seed"]
         self.model_address = config["model_address"]
