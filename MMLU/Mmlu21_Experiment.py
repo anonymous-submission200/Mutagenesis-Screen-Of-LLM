@@ -581,7 +581,7 @@ def _output_func(ps, dt, pad, mid, loc1, loc2):
         loc1 (int): Starting loc1 site.
         loc2 (int): Starting loc2 site.
     """
-    ps.para_dict[mid][w:w+ps.step, h:h+ps.step] = dt.pad_dict[pad][:,:]
+    ps.para_dict[mid][loc1:loc1+ps.step, loc2:loc2+ps.step] = dt.pad_dict[pad][:,:]
     output_list = _one_round_output_func(ps, dt)
     output = '| |'.join(output_list)
     # modify non-ASCII characters
