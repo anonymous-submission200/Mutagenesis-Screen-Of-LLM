@@ -76,7 +76,7 @@ class Data(object):
         self.path_log_file = os.path.join(ps.path_output, f'{ps.experiment_name}_{{}}_log_{ps.time}.txt')  # {{mid}}
 
         # Finish file: Records the site (loc1, loc2) of the last mutation calculated; (loc1,loc2) mutation location on matrix
-        self.path_finished_file = os.path.join(ps.path_output, f'{ps.experiment_name}_{{}}_{ps.time}.txt')  # {{mid}}
+        self.path_finished_file = os.path.join(ps.path_output, f'{ps.experiment_name}_{{}}_finished_{ps.time}.txt')  # {{mid}}
         
         # Done file: Records mid if the calculation for the mid matrix is complete
         self.path_done_file = os.path.join(ps.path_output, f'{ps.experiment_name}_done_{ps.time}.txt')
