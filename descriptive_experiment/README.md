@@ -7,6 +7,7 @@ conda activate MgScreen3.10
 python decriptive_Experiment.py model.layers.12.self_attn.v_proj.weight  path/to/your/parameters_config.json
 ```
 
+
 ## Guide to Writing `parameters_config.json`
 
 This configuration file contains the parameters needed to run the program. Below is an explanation of each key and its expected value:
