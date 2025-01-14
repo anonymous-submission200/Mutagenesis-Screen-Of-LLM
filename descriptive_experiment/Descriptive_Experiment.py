@@ -354,7 +354,6 @@ def _finished_func(ps, dt, w, h):
         output_file.write("{},{}".format(w, h))
     return None
 
-def _output_func(ps, dt, pad, mid, w, h):
 def _output_func(ps, dt, pad, mid, loc1, loc2):
     """
     Handles mutation processing and logging results.
