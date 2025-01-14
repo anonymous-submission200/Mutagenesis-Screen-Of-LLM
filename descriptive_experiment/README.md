@@ -3,10 +3,10 @@
 # Activate environment. GPU is needed for running code
 conda activate MgScreen3.10
 
-# python decriptive_Experiment.py matrix_id address_JSON_configuration_file
-python decriptive_Experiment.py model.layers.12.self_attn.v_proj.weight  path/to/your/parameters_config.json
+# python Decriptive_Experiment.py matrix_id address_JSON_configuration_file
+python Decriptive_Experiment.py model.layers.12.self_attn.v_proj.weight  path/to/your/parameters_config.json
 ```
-
+---
 
 ## Guide to Writing `parameters_config.json`
 
