@@ -1,4 +1,4 @@
-#Prompt and code with 5 in-context learning examples from the https://github.com/FranxYao/chain-of-thought-hub was used
+#the prompt and code with 5 in-context learning examples from the https://github.com/FranxYao/chain-of-thought-hub was used
 
 import os
 import shutil
@@ -42,6 +42,7 @@ class Parameters:
         self.step = config["step"]
         self.max_token = config["max_token"]
         self.pad_list = config["pad_list"]
+        self.time = config["time"]
 
         # Dynamically generate development set path and prompt template
         self.path_dev = os.path.join(self.path_mmlu, f"dev/{task}_dev.csv")
@@ -54,10 +55,6 @@ class Parameters:
         """
         Verify the existence of required directories and files. Raise errors if any validation fails.
         """
-        # Check if the model address exists
-        if not os.path.isdir(self.model_address):
-            raise FileNotFoundError(f"The model address does not exist: {self.model_address}")
-            
         # Check if the MMLU folder exists
         if not os.path.isdir(self.path_mmlu):
             raise FileNotFoundError(f"The MMLU folder does not exist: {self.path_mmlu}")
@@ -91,19 +88,19 @@ class Data:
         """
         # File paths
         # Standard file: Records output from the standard model with no mutation
-        self.path_std_file = os.path.join(ps.path_output, f'zph_mmlu_{ps.task}_{ps.seed}_std_110723.txt')
+        self.path_std_file = os.path.join(ps.path_output, f'mmlu_{ps.task}_{ps.seed}_std_{ps.time}.txt')
 
         # Code file: Records the unique integer code assigned to each unique output (phenotype) from mutations
-        self.path_code_file = os.path.join(ps.path_output, f'zph_mmlu_{ps.task}_{ps.seed}_{{}}_code_110723.txt')  # {{mid}}
+        self.path_code_file = os.path.join(ps.path_output, f'mmlu_{ps.task}_{ps.seed}_{{}}_code_{ps.time}.txt')  # {{mid}}
 
         # Log file: Records each non-silent mutation in the format {pad} {mid}:{loc1},{loc2}:{code of phenotype}
-        self.path_log_file = os.path.join(ps.path_output, f'zph_mmlu_{ps.task}_{ps.seed}_{{}}_log_110723.txt')  # {{mid}}
+        self.path_log_file = os.path.join(ps.path_output, f'mmlu_{ps.task}_{ps.seed}_{{}}_log_{ps.time}.txt')  # {{mid}}
 
         # Finish file: Records the site (loc1, loc2) of the last mutation calculated; (loc1,loc2) mutation location on matrix
-        self.path_finished_file = os.path.join(ps.path_output, f'zph_mmlu_{ps.task}_{ps.seed}_{{}}_finished_110723.txt')  # {{mid}}
+        self.path_finished_file = os.path.join(ps.path_output, f'mmlu_{ps.task}_{ps.seed}_{{}}_finished_{ps.time}.txt')  # {{mid}}
 
         # Done file: Records mid if the calculation for the mid matrix is complete
-        self.path_done_file = os.path.join(ps.path_output, 'zph_mmlu_done_110723.txt')
+        self.path_done_file = os.path.join(ps.path_output, 'mmlu_done_{ps.time}.txt')
 
         # Load data
         self.dev_df = self.load_csv(ps.path_dev, nrows=5)
@@ -319,7 +316,7 @@ def one_mid_func(ps, dt, mid, loc1, loc2):
         _process_one_loc2(ps, dt, mid, loc1_size, loc2_size, loc2_idx, loc1)
         loc1 = 0  # Reset loc1 to the beginning after completing a loc2
 
-    # Mark the current intermediate layer as processed
+    # Record the matrix id when done
     with open(dt.path_done_file, 'a') as output_file:
         output_file.write(f'{mid}\n')
 
@@ -351,7 +348,7 @@ def _initialize_pad_dict(ps, device, mid):
 
 def _process_one_loc2(ps, dt, mid, loc1_size, loc2_size, loc2_idx, loc1):
     """
-    Processall sites with the same loc2 on the parameter matrix, performing padding and restoration operations block by block.
+    Process all sites with the same loc2 on the parameter matrix, performing padding and restoration operations block by block.
 
     Args:
         ps: Parameters object containing the parameter dictionary and configuration.
@@ -378,6 +375,7 @@ def _process_one_loc2(ps, dt, mid, loc1_size, loc2_size, loc2_idx, loc1):
 
         # Mark the current block as processed
         _finished_func(ps, dt, loc1_idx, loc2_idx)
+    return None
 
 
 def _one_prompt_func(ps, dt, smp_df):
