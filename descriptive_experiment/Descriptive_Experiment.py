@@ -341,7 +341,7 @@ def _stop_site_func(ps, dt, mid):
             loc1 += ps.step  # Advance to the next step
     return loc1, loc2
 
-def _finished_func(ps, dt, w, h):
+def _finished_func(ps, dt, loc1, loc2):
     """
     Records the site of the most recently processed mutation.
 
@@ -352,7 +352,7 @@ def _finished_func(ps, dt, w, h):
         loc2 (int): Starting loc2 site.
     """
     with open(dt.path_finished_file, 'w') as output_file:
-        output_file.write("{},{}".format(w, h))
+        output_file.write("{},{}".format(loc1, loc2))
     return None
 
 def _output_func(ps, dt, pad, mid, loc1, loc2):
@@ -376,7 +376,7 @@ def _output_func(ps, dt, pad, mid, loc1, loc2):
     key = _key_func(ps, dt, mid, output_token)
     if key != 'std':
         with open(dt.path_log_file, 'a') as log_file:
-            log_file.write("{} {}:{},{}:{}\n".format(pad, mid, w, h, key))
+            log_file.write("{} {}:{},{}:{}\n".format(pad, mid, loc1, loc2, key))
     return None
 
 def _key_func(ps, dt, mid, output_token):
