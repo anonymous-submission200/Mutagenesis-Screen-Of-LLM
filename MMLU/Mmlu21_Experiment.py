@@ -28,13 +28,13 @@ class Parameters:
             raise RuntimeError(f"Error loading JSON configuration file file {path_config}: {e}")
 
         # Set parameters
-        self.task = config["tast"]
+        self.task = config["task"]
         self.seed = config["seed"]
         self.model_address = config["model_address"]
         self.path_mmlu = config["path_mmlu"]
-        self.path_test_right = os.path.join(config["path_test_right"], f"{task}_test.csv")
-        self.path_test_wrong = os.path.join(config["path_test_wrong"], f"{task}_test.csv")
-        self.path_output = os.path.join(config["path_output_base"], f"{task}_{seed}")
+        self.path_test_right = os.path.join(config["path_test_right"], f"{self.task}_test.csv")
+        self.path_test_wrong = os.path.join(config["path_test_wrong"], f"{self.task}_test.csv")
+        self.path_output = os.path.join(config["path_output_base"], f"{self.task}_{self.seed}")
 
         # Other configurations
         self.max_test = config["max_test"]
@@ -45,8 +45,8 @@ class Parameters:
         self.time = config["time"]
 
         # Dynamically generate development set path and prompt template
-        self.path_dev = os.path.join(self.path_mmlu, f"dev/{task}_dev.csv")
-        self.raw_prompt = f"The following are multiple-choice questions (with answers) about {task.replace('_', ' ')}.\n\n"
+        self.path_dev = os.path.join(self.path_mmlu, f"dev/{self.task}_dev.csv")
+        self.raw_prompt = f"The following are multiple-choice questions (with answers) about {self.task.replace('_', ' ')}.\n\n"
         
         # Verify paths and raise errors if necessary
         self._verify_paths()
@@ -100,7 +100,7 @@ class Data:
         self.path_finished_file = os.path.join(ps.path_output, f'mmlu_{ps.task}_{ps.seed}_{{}}_finished_{ps.time}.txt')  # {{mid}}
 
         # Done file: Records mid if the calculation for the mid matrix is complete
-        self.path_done_file = os.path.join(ps.path_output, 'mmlu_done_{ps.time}.txt')
+        self.path_done_file = os.path.join(ps.path_output, f'mmlu_done_{ps.time}.txt')
 
         # Load data
         self.dev_df = self.load_csv(ps.path_dev, nrows=5)
@@ -111,7 +111,6 @@ class Data:
         # Initialize other attributes
         self.input_token_list = []
         self.right_answer_list = []
-        self.path_file_dict = {}
         self.pad_dict = {}
         self.var_dict = {}
         self.choice = ["A", "B", "C", "D"]
@@ -205,20 +204,15 @@ def input_func(ps, dt):
     dt.right_answer_list = []
 
     # Combine correct and incorrect test datasets
-    combined_df = pd.concat([dt.test_right_df, dt.test_wrong_df], ignore_index=True)
-
-    # Process each row to generate prompts and encode input tokens
-    def process_row(row):
-        # Generate the correct answer
-        dt.right_answer_list.append(row.iloc[-1])
-        # Generate input prompt and encode it
-        prompt = _one_prompt_func(ps, dt, row)
-        input_token = ps.tokenizer.encode(prompt, return_tensors="pt", padding=True).to(f"cuda:{dt.gpu_id}")
-        dt.input_token_list.append(input_token)
-
-    # Apply the processing function to each row
-    combined_df.apply(process_row, axis=1)
-
+    for df in [dt.test_right_df, dt.test_wrong_df]:
+        # Process each row to generate prompts and encode input tokens
+        for i in range(df.shape[0]):
+            # Collect the correct answer
+            dt.right_answer_list.append(df.iloc[i, df.shape[1]-1])
+            # Generate input prompt and encode it
+            prompt = _one_prompt_func(ps, dt, df.iloc[i])
+            input_token = ps.tokenizer.encode(prompt, return_tensors="pt", padding=True).to(f"cuda:{dt.gpu_id}")
+            dt.input_token_list.append(input_token)
     return None
 
 def standard_output_func(ps, dt):
@@ -486,9 +480,10 @@ def _generate_outputs(ps, dt):
         list: A list of generated answers.
     """
     output_list = []
-    torch.manual_seed(ps.seed)  # Set random seed for reproducibility
 
     for input_token in dt.input_token_list:
+        # Set random seed for reproducibility
+        torch.manual_seed(ps.seed)
         # Generate output tokens
         output_token = ps.model.generate(input_token, max_new_tokens=1)
         last_token = output_token[0, -1]
