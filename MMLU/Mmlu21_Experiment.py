@@ -1,5 +1,3 @@
-#the prompt and code with 5 in-context learning examples from the https://github.com/FranxYao/chain-of-thought-hub was used
-
 import os
 import shutil
 import sys
