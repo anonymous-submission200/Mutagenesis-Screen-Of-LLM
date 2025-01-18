@@ -480,7 +480,7 @@ def _generate_outputs(ps, dt):
     output_list = []
 
     for input_token in dt.input_token_list:
-        # Set random seed for reproducibility
+        # Reset random seed before each model.generate step, critical for reproducibility.
         torch.manual_seed(ps.seed)
         # Generate output tokens
         output_token = ps.model.generate(input_token, max_new_tokens=1)
