@@ -140,7 +140,8 @@ def standard_output_func(ps, dt):
         with open(dt.path_std_file, 'r') as std_file:
             dt.std = std_file.read()
     else:
-        torch.manual_seed(ps.seed)  # Set random seed for reproducibility
+        # Reset random seed before each model.generate step, critical for reproducibility.
+        torch.manual_seed(ps.seed)
         output_token  = ps.model.generate(ps.inputs, max_length=ps.max_length, num_return_sequences=1, do_sample=True, temperature=ps.temperature)[0]
         dt.std_output_token_str =  ' '.join([str(item) for item in output_token.tolist()])
         output = ps.tokenizer.decode(output_token)
@@ -219,8 +220,8 @@ def _initialize_pad_dict(ps, device, mid):
     param_matrix = ps.para_dict[mid]
 
     pad_dict['zero'] = torch.zeros(step, step).to(device)  # Zero padding
-    pad_dict['max'] = torch.full((step, step), torch.max(param_matrix), device=device)  # Max-value padding
-    pad_dict['min'] = torch.full((step, step), torch.min(param_matrix), device=device)  # Min-value padding
+    pad_dict['min'] = torch.full((step, step), torch.max(param_matrix), device=device)  # Max-value padding
+    pad_dict['max'] = torch.full((step, step), torch.min(param_matrix), device=device)  # Min-value padding
 
     return pad_dict
 
@@ -368,7 +369,7 @@ def _output_func(ps, dt, pad, mid, loc1, loc2):
         loc2 (int): Starting loc2 site.
     """
     ps.para_dict[mid][loc1:loc1+ps.step, loc2:loc2+ps.step] = dt.pad_dict[pad][:,:]
-    # Set random seed for reproducibility
+    # Reset random seed before each model.generate step, critical for reproducibility.
     torch.manual_seed(ps.seed)
     
     # Generate output tokens
