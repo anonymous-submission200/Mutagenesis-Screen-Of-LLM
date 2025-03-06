@@ -617,7 +617,7 @@ def main():
     print('Process {}'.format(os.getpid()))
     mid = sys.argv[1]
     path_config = "parameters_config.json"
-    if len(sys.argv)>1:
+    if len(sys.argv)>2:
         path_config = sys.argv[2]
     ps = Parameters(path_config)
     dt = Data(ps)
