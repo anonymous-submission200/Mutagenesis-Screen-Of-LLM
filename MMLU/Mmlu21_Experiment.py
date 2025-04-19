@@ -44,7 +44,7 @@ class Parameters:
 
         # Dynamically generate development set path and prompt template
         self.path_dev = os.path.join(self.path_mmlu, f"dev/{self.task}_dev.csv")
-        self.raw_prompt = f"The following are multiple-choice questions (with answers) about {self.task.replace('_', ' ')}.\n\n"
+        self.raw_prompt = f"The following are multiple choice questions (with answers) about {self.task.replace('_', ' ')}.\n\n"
         
         # Verify paths and raise errors if necessary
         self._verify_paths()
